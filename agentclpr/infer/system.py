@@ -1,3 +1,4 @@
+import cv2
 import numpy as np
 
 from agentocr import OCRSystem
@@ -27,6 +28,16 @@ class CLPSystem:
                              **kwarg)
 
     def __call__(self, image):
+        if isinstance(image, np.ndarray):
+            results = self.det_ocr(image)
+        elif isinstance(image, str):
+            image = cv2.imdecode(np.fromfile(image, dtype=np.uint8), 1)
+            results = self.det_ocr(image)
+        else:
+            raise ValueError('Please Check the image format.')
+        return results
+
+    def det_ocr(self, image):
         results = []
         det_results = self.det(image)
         for det_result in det_results:
