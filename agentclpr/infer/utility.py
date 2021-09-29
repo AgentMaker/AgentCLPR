@@ -36,7 +36,7 @@ rec_model = os.path.join(
 rec_char_dict_path = os.path.join(
     package_dir,
     'resources',
-    'char_dict',
+    'char_dicts',
     'clp_dict.txt'
 )
 
