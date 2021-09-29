@@ -13,7 +13,7 @@ class CLPDetector:
             confidence_threshold=0.02,
             top_k=1000,
             nms_threshold=0.4,
-            vis_threshold=0.5,
+            vis_threshold=0.7,
             keep_top_k=500,
             min_sizes=[[24, 48], [96, 192], [384, 768]],
             steps=[8, 16, 32],

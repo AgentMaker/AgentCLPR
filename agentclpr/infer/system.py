@@ -15,7 +15,7 @@ class CLPSystem:
             rec_model=rec_model,
             rec_char_dict_path=rec_char_dict_path,
             det_db_score_mode='slow',
-            det_db_unclip_ratio=1.0,
+            det_db_unclip_ratio=1.3,
             **kwarg):
         self.det = CLPDetector(clp_det_model, **kwarg)
         self.ocr = OCRSystem(det_model=det_model,
