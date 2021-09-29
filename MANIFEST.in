@@ -1,0 +1,2 @@
+recursive-include agentclpr/resources/char_dicts *.txt
+recursive-include agentclpr/resources/pretrained_models *.onnx
