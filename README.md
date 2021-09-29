@@ -1,6 +1,6 @@
 # AgentCLPR
 ## 简介
-* 一个基于 ONNXRuntime、AgentOCR 和 License-Plate-Detector 项目开发的中国车牌检测识别系统。
+* 一个基于 [ONNXRuntime](https://github.com/microsoft/onnxruntime)、[AgentOCR](https://github.com/AgentMaker/AgentOCR) 和 [License-Plate-Detector](https://github.com/zeusees/License-Plate-Detector) 项目开发的中国车牌检测识别系统。
 
 
 ## 车牌识别效果
