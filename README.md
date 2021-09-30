@@ -47,15 +47,15 @@
     # 更多版本的安装详情请参考 ONNXRuntime 官网
     ```
 
-    * 简单调用：
+* 简单调用：
 
-        ```python
-        # 导入 CLPSystem 模块
-        from agentclpr import CLPSystem
+    ```python
+    # 导入 CLPSystem 模块
+    from agentclpr import CLPSystem
 
-        # 初始化车牌识别模型
-        clp = CLPSystem()
+    # 初始化车牌识别模型
+    clp = CLPSystem()
 
-        # 使用模型对图像进行车牌识别
-        results = clp('test.jpg')
-        ```
+    # 使用模型对图像进行车牌识别
+    results = clp('test.jpg')
+    ```
