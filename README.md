@@ -2,6 +2,38 @@
 ## 简介
 * 一个基于 [ONNXRuntime](https://github.com/microsoft/onnxruntime)、[AgentOCR](https://github.com/AgentMaker/AgentOCR) 和 [License-Plate-Detector](https://github.com/zeusees/License-Plate-Detector) 项目开发的中国车牌检测识别系统。
 
+## 快速使用
+* 快速安装
+
+    ```bash
+    $ pip install agentclpr
+
+    # 根据设备平台安装合适版本的 ONNXRuntime
+
+    # CPU 版本（推荐非 win10 系统，无 CUDA 支持的设备安装）
+    $ pip install onnxruntime
+
+    # GPU 版本（推荐有 CUDA 支持的设备安装）
+    $ pip install onnxruntime-gpu
+
+    # DirectML 版本（推荐 win10 系统的设备安装，可实现通用的显卡加速）
+    $ pip install onnxruntime-directml
+
+    # 更多版本的安装详情请参考 ONNXRuntime 官网
+    ```
+
+    * 简单调用：
+
+        ```python
+        # 导入 CLPSystem 模块
+        from agentclpr import CLPSystem
+
+        # 初始化车牌识别模型
+        clp = CLPSystem()
+
+        # 使用模型对图像进行车牌识别
+        results = clp('test.jpg')
+        ```
 
 ## 车牌识别效果
 
