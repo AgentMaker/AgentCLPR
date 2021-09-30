@@ -1,4 +1,11 @@
 # AgentCLPR
+
+![GitHub forks](https://img.shields.io/github/forks/AgentMaker/AgentCLPR)
+![GitHub Repo stars](https://img.shields.io/github/stars/AgentMaker/AgentCLPR)
+![Pypi Downloads](https://pepy.tech/badge/agentclpr)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/AgentMaker/AgentCLPR?include_prereleases)
+![GitHub](https://img.shields.io/github/license/AgentMaker/AgentCLPR) 
+
 ## 简介
 
 * 一个基于 [ONNXRuntime](https://github.com/microsoft/onnxruntime)、[AgentOCR](https://github.com/AgentMaker/AgentOCR) 和 [License-Plate-Detector](https://github.com/zeusees/License-Plate-Detector) 项目开发的中国车牌检测识别系统。
