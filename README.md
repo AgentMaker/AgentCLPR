@@ -6,6 +6,7 @@
 * 快速安装
 
     ```bash
+    # 安装 AgentCLPR
     $ pip install agentclpr
 
     # 根据设备平台安装合适版本的 ONNXRuntime
