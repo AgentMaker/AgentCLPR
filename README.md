@@ -59,3 +59,42 @@
     # 使用模型对图像进行车牌识别
     results = clp('test.jpg')
     ```
+
+* 服务器部署：
+
+    * 启动 AgentCLPR Server 服务
+
+        ```shell
+        $ agentclpr server
+        ```
+
+    * Python 调用
+
+        ```python
+        import cv2
+        import json
+        import base64
+        import requests
+
+        # 图片 Base64 编码
+        def cv2_to_base64(image):
+            data = cv2.imencode('.jpg', image)[1]
+            image_base64 = base64.b64encode(data.tobytes()).decode('UTF-8')
+            return image_base64
+
+        # 读取图片
+        image = cv2.imread('test.jpg')
+        image_base64 = cv2_to_base64(image)
+
+        # 构建请求数据
+        data = {
+            'image': image_base64
+        }
+
+        # 发送请求
+        url = "http://127.0.0.1:5000/ocr"
+        r = requests.post(url=url, data=json.dumps(data))
+
+        # 打印预测结果
+        print(r.json())
+        ```
