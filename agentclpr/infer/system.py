@@ -43,11 +43,12 @@ class CLPSystem:
         for det_result in det_results:
             bbox = list(map(int, det_result[:4]))
             points = np.array(
-                list(map(int, det_result[5:13]))).reshape(4, 2).tolist()
-            det_score = det_result[4]
+                list(map(int, det_result[5:13]))
+            ).reshape(4, 2).tolist()
             x1, y1, x2, y2 = tuple(bbox)
+            w, h = x2-x1+20, y2-y1+20
             img_ocr_infer = np.pad(
-                image[y1-10:y2 + 11, x1-10:x2 + 11, :],
+                cv2.resize(image[y1-10:y2 + 11, x1-10:x2 + 11, :], (256, int(256/w*h))),
                 ((100, 100), (100, 100), (0, 0)),
                 mode='constant',
                 constant_values=(255, 255)
