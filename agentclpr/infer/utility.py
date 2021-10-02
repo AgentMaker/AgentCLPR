@@ -1,4 +1,6 @@
 import os
+import cv2
+import base64
 import numpy as np
 import onnxruntime as ort
 
@@ -163,3 +165,10 @@ def decode_landm(pre, priors, variances):
                              variances[0] * priors[:, 2:],
                              ), axis=1)
     return landms
+
+
+def base64_to_cv2(b64str):
+    data = base64.b64decode(b64str.encode('utf8'))
+    data = np.fromstring(data, np.uint8)
+    data = cv2.imdecode(data, cv2.IMREAD_COLOR)
+    return data

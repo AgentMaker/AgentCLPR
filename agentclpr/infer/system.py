@@ -1,10 +1,11 @@
 import cv2
+import json
 import numpy as np
 
 from agentocr import OCRSystem
 
 from .detector import CLPDetector
-from .utility import clp_det_model, det_model, cls_model, rec_model, rec_char_dict_path
+from .utility import clp_det_model, det_model, cls_model, rec_model, rec_char_dict_path, base64_to_cv2
 
 
 class CLPSystem:
